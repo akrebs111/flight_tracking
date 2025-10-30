@@ -10,7 +10,7 @@ const PORT = 8000
 const express = require("express")
 
 const app = express() 
-
+const {runQueries} = require('../server/database.js')
 // Serve static files from the "/var/www/html" directory 
 app.use(express.static('/var/www/html'))
 
