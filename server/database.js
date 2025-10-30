@@ -160,7 +160,8 @@ const loadCSV2 = async () => {
                 host: process.env.pgHost,
                 max: 2,                              // # of pool connections
                 connectionTimeoutMillis: 10000,      // How long to wait for new pool connection
-                idleTimeoutMillis: 10000             // How long to wait before destroying unused connections
+                idleTimeoutMillis: 10000,
+                ssl: { rejectUnauthorized: false }             // How long to wait before destroying unused connections
             })
 
             // Database Insert Statement
