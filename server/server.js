@@ -10,7 +10,9 @@ const PORT = 8000
 const express = require("express")
 
 const app = express() 
-const {runQueries} = require('../server/database.js')
+
+const {runQueries} = require('/home/ec2-user/flight_tracking/server/database.js')
+
 // Serve static files from the "/var/www/html" directory 
 app.use(express.static('/var/www/html'))
 
@@ -133,7 +135,7 @@ app.get('/flights/:airport_code', async (request, response) => {
           console.log(" +++++++++ calling runQueries() +++++++++++++++")
           
           // Used for lab 7
-          // runQueries(json)
+          runQueries(json)
 
           console.log(" +++++++++ completed runQueries() +++++++++++++++")
 
